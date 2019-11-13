@@ -27,6 +27,15 @@ import Foundation
 /// An object that groups the metadata of a messages sender.
 @available(*, deprecated: 3.0.0, message: "`Sender` has been replaced with the `SenderType` protocol in 3.0.0")
 public struct Sender: SenderType {
+    
+    // profilePictureUrl of the sender
+    public var profilePictureUrl: URL?
+    public init(id: String, displayName: String, profilePictureUrl: URL?) {
+        self.senderId = id
+        self.displayName = displayName
+        self.profilePictureUrl = profilePictureUrl
+    }
+    
 
     /// MARK: - Properties
 
